@@ -2,14 +2,13 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   background-color: hsl(191, 100%, 96%);
   background-image: linear-gradient(
-    to bottom #eafbff 0%,
+    to bottom,
+    #eafbff 0%,
     #eafbff 50%,
     #5290f9 50%,
     #5290f9 100%
@@ -19,12 +18,14 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin: 0;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: hsl(0, 0%, 100%);
   width: 5rem;
   padding: 1.25rem;
   border-radius: 5px;
@@ -68,6 +69,11 @@ nav ul a {
   margin: 0 10px;
 }
 
+nav a:hover {
+  border-bottom: 2px solid #5290f9;
+  transition: all 350ms ease-in-out;
+}
+
 .icon {
   background-color: hsl(0, 0%, 100%);
   border: 0;
@@ -97,10 +103,10 @@ nav ul a {
   bottom: 10px;
 }
 
-.nav.active .icon .line1 {
+nav.active .icon .line1 {
   transform: rotate(-765deg) translateY(5.5px);
 }
 
-.nav.active .icon .line2 {
+nav.active .icon .line2 {
   transform: rotate(765deg) translateY(-5.5px);
 }
